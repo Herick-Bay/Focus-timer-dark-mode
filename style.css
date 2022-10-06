@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    background: var(--bg-color);
+
+}
+
+.white {
+    --bg-color: #ffffff;
+    --Itens-color: #323238;
+    --svg-bg-color: #E1E1E6;
+    --svg-icon-color: #323238;
+    --svg-bg-click: #02799D;
+    --svg-icon-click: #ffffff;
+    --input-click-color: #ffffff;
+}
+
+.dark {
+    --bg-color: #121214;
+    --Itens-color: #FFFFFF;
+    --svg-bg-color: #29292E;
+    --svg-icon-color: #FFFFFF;
+    --svg-bg-click: #0A3442;
+    --svg-icon-click: #ffffff;
+    --input-click-color: #ffffff;
+}
+
+.conteiner {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    gap: 19.2rem;
+}
+
+.button-sun,
+.button-moon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6.0rem;
+}
+
+.timer {
+    margin-top: 5.8rem;
+}
+
+.timer span {
+    font-size: 12.6rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--Itens-color);
+    line-height: 14.8rem;
+}
+
+.timer svg path {
+    fill: var(--Itens-color)
+}
+
+.card svg path:nth-child(1) {
+    fill: var(--svg-bg-color);
+}
+
+.card svg path:nth-child(2) {
+    fill: var(--svg-icon-color)
+}
+
+.timerControls {
+    display: flex;
+    gap: 4.0rem;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.soundpad {
+    display: grid;
+    grid-template-areas: "A B""C D";
+    gap: 3.2rem;
+}
+
+.soundpad div {
+    transition-duration: 300ms;
+}
+
+.soundpad div:hover {
+    transform: scale(1.1);
+}
+
+.custom svg path:nth-child(1) {
+    fill: var(--svg-bg-click)
+}
+
+.custom svg path:nth-child(2) {
+    fill: var(--svg-icon-click)
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+input[type=range] {
+    width: 9rem;
+    height: 0.4rem;
+    border-radius: 5rem;
+    background-color: var(--Itens-color);
+    position: absolute;
+    appearance: none;
+    margin: 11.2rem auto;
+}
+
+.custom-input[type=range] {
+    width: 9rem;
+    height: 0.4rem;
+    border-radius: 5rem;
+    background-color: var(--input-click-color);
+    position: absolute;
+    appearance: none;
+    margin: 11.2rem auto;
+}
+
+input::-webkit-slider-thumb {
+    background-color: var(--Itens-color);
+    -webkit-appearance: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 5rem;
+}
+
+.custom-input::-webkit-slider-thumb {
+    background-color: var(--input-click-color);
+    -webkit-appearance: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 5rem;
+}
+
+@media (max-width: 768px) {
+    .conteiner {
+        flex-direction: column;
+        gap: 5.0rem
+    }
+}
